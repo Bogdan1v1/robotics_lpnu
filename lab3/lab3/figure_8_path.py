@@ -19,7 +19,7 @@ class Figure8Path(Node):
         w = float(self.get_parameter("angular_speed").value)
         dt = 1.0 / max(float(self.get_parameter("rate_hz").value), 1.0)
 
-        duration = 2.0 * math.pi / max(abs(w), 1e-6)
+        duration = 3.0 * math.pi / max(abs(w), 1e-6)
 
         msg = TwistStamped()
         msg.header.frame_id = 'base_link'
